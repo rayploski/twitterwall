@@ -123,7 +123,7 @@ body {
 /* this allows us to customise what part is animated to fullscreen */
 #notices .fullscreen {
   top: 100%;
-  background: white;
+  background: green;
 }
 
 /* this third notice will slide upwards as it also has .fullscreen */
