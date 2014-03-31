@@ -1,12 +1,12 @@
 var config = {
   // Twitter API (Proxy) URL
-  baseUrl: 'http://localhost:7890',
+  baseUrl: 'http://twitterproxy-jbossdeveloper.rhcloud.com',
 
   debug: false,
-  title: 'Twitter wall built by @rem',
+  title: 'DevNation Twitter Wall',
 
-  search: 'from:@fullfrontalconf OR @fullfrontalconf OR #fullfrontalconf OR #fullfrontal2011 OR full-frontal.org OR #fullfrontal11',
-  list: 'fullfrontalconf/delegates11', // optional, just comment it out if you don't want it
+  //list: 'DevNationConf/speakers14',
+  search: 'from:@devnationconf OR #devnation OR devnation.org OR #devnation14',
 
   timings: {
     showNextScheduleEarlyBy: '5m', // show the next schedule 10 minutes early
