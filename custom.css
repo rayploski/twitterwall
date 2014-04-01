@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Cabin Sketch';
-    src: url('fonts/cabinsketch-bold-webfont.eot');
-    src: url('fonts/cabinsketch-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/cabinsketch-bold-webfont.woff') format('woff'),
-         url('fonts/cabinsketch-bold-webfont.ttf') format('truetype'),
-         url('fonts/cabinsketch-bold-webfont.svg#CabinSketchBold') format('svg');
+    font-family: 'OpenSans-Regular';
+    src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+    src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#CabinSketchBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -13,11 +13,11 @@ html {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2P4//+/MBQzgDAICEMxXAAMYCoRIlCVANL6FYTYi5d+AAAAAElFTkSuQmCC);
   background-position: center -100px; /* 71px */
   background-repeat: repeat, no-repeat;
-  background-color: #008999;
+  background-color: #191930;
 }
 
 body {
-  font-family: 'Century Gothic', sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
   color: #93cfd6;
   font-size: 24px; 
 }
@@ -27,7 +27,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(255,255,255,0.6);
+  background: #6dbcdb;
 
   padding: 20px;
 }
@@ -35,11 +35,11 @@ body {
 #schedule div > * {
   margin: 0;
   padding: 0;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.05em;
 }
 
 #schedule { 
-  color: #000; 
+  color: #fff; 
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +48,7 @@ body {
 }
 
 #schedule a {
-  color: rgba(0,0,0,0.7);
+  color: #191930;
 }
 
 #schedule h3 {
@@ -63,7 +63,7 @@ body {
 }
 
 #schedule > * {
-  text-shadow: 0px 1px 1px #fff;
+/*  text-shadow: 0px 1px 1px #191930; */
 }
 
 #schedule img {
@@ -79,12 +79,12 @@ body {
 /* twitter colours */
 #tweets a { color: rgba(255,255,255,0.7); }
 .hentry .meta, #tweets .meta a { color: #99CFD7; }
-#tweets li { background: rgba(255, 255, 255, 0.2); }
+#tweets li { background: #fc5c47; }
 .tweet { color: #fff; }
 
 /* this simply puts a large background image on the schedule element if it matches the schedule time */
 #schedule[data-time="0940"] {
-  background-image: url(/images/sample/remy.jpg);
+  background-image:url(images/speakers/RayPloski.jpg);
 }
 #schedule[data-time="0950"] {
   background-image: url(/images/sample/jeremy.jpg);
@@ -123,10 +123,35 @@ body {
 /* this allows us to customise what part is animated to fullscreen */
 #notices .fullscreen {
   top: 100%;
-  background: green;
 }
 
 /* this third notice will slide upwards as it also has .fullscreen */
-#notice3.show {
+#noticeSunday.show {
   top: 0;
+  background-image:url(images/schedule/devnation2014_agendamonitor_sunday.png);
+  background-size: cover;
+}
+
+#noticeMonday.show {
+  top: 0;
+  background-image:url(images/schedule/devnation2014_agendamonitor_monday.png);
+  background-size: cover;
+}
+
+#noticeTuesday.show {
+  top: 0;
+  background-image:url(images/schedule/devnation2014_agendamonitor_tuesday.png);
+  background-size: cover;
+}
+
+#noticeWednesday.show {
+  top: 0;
+  background-image:url(images/schedule/devnation2014_agendamonitor_wednesday.png);
+  background-size: cover;
+}
+
+#noticeThursday.show {
+  top: 0;
+  background-image:url(images/schedule/devnation2014_agendamonitor_thursday.png);
+  background-size: cover;
 }
