@@ -119,6 +119,7 @@ function findNextSchedule(delayM, after) {
       t = after ? parseTime(after) : window.debugTime || (new Date()).getTime(),
       times = Object.keys(SCHEDULE).sort();
 
+  var s;
   for (var i = 0; i < times.length; i++) {
     s = times[i];
     if ((parseTime(s) + delayM) > t) break;
@@ -506,8 +507,20 @@ $(window).keydown(function (event) {
   }
 });
 
-init();
 
+
+function init_map(){
+    var mapCanvas = document.getElementById('map_canvas');
+    var mapOptions = {
+        center: new google.maps.LatLng(37.787846, -122.397226),
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+
+init();
+init_map();
 
 
 

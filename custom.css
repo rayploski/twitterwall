@@ -155,3 +155,9 @@ body {
   background-image:url(images/schedule/devnation2014_agendamonitor_thursday.png);
   background-size: cover;
 }
+
+
+#map_canvas {
+    width: 500px;
+    height: 400px;
+}

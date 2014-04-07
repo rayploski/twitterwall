@@ -7,10 +7,11 @@ var config = {
 
   //list: 'DevNationConf/speakers14',
   search: 'from:@devnationconf OR #devnation OR devnation.org OR #devnation14',
+  timeline: '@devnationconf',
 
   timings: {
     showNextScheduleEarlyBy: '5m', // show the next schedule 10 minutes early
-    defaultNoticeHoldTime: '10s',
+    defaultNoticeHoldTime: '25s',
     showTweetsEvery: '3s'
   }
 };
