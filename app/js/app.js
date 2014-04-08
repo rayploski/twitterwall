@@ -520,7 +520,7 @@ function init_map(){
 }
 
 init();
-init_map();
+//init_map();
 
 
 
