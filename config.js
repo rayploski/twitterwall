@@ -1,7 +1,7 @@
 var config = {
   // Twitter API (Proxy) URL
-  baseUrl: 'http://twitterproxy-jbossdeveloper.rhcloud.com',
-
+  //baseUrl: 'http://twitterproxy-jbossdeveloper.rhcloud.com',
+  baseUrl: "",
   debug: true,
   title: 'DevNation Twitter Wall',
 

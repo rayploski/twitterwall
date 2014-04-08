@@ -23,7 +23,7 @@
         retweets: '/1.1/statuses/retweeted_by_user.json?screen_name=%user%&include_entities=true&count=%limit|200%&since_id=%since|remove%&page=%page|1%'
       },
       urls = URLS, // allows for resetting debugging
-      caching = false;
+      caching = true;
 
   var ify = function() {
     return {
@@ -461,6 +461,7 @@
 
   function getUrl(type, options) {
     options = options || {};
+
     return (twitterlib.baseUrl + urls[type]).replace(/(\b.*?)%(.*?)(\|.*?)?%/g, function (a, q, key, def) {
       // remove empty values that shouldn't be sent
       if (def && def.substr(1) == 'remove' && options[key] == undefined) {
@@ -578,7 +579,10 @@
       setLast('list', list, options);
       options.user = parts[0];
       options.list = parts[1];
-      if (options.callback) load(getUrl('list', options), options, options.callback);
+      if (options.callback) {
+          console.log(options);
+        load(getUrl('list', options), options, options.callback);
+      }
       return this;
     },
     next: function () {

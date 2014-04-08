@@ -326,6 +326,8 @@ function run() {
 
   var tweets = twitterlib.search(config.search, options, passToQueue);
   if (config.list) tweets.list(config.list, options, passToQueue);
+  var debug = config.debug;
+  console.log("Debug: " + debug);
 };
 
 function notices() {
@@ -508,19 +510,7 @@ $(window).keydown(function (event) {
 });
 
 
-
-function init_map(){
-    var mapCanvas = document.getElementById('map_canvas');
-    var mapOptions = {
-        center: new google.maps.LatLng(37.787846, -122.397226),
-        zoom: 18,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-
 init();
-//init_map();
 
 
 
