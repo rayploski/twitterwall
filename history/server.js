@@ -1,4 +1,4 @@
-var twitterlib = require('./twitterlib'),
+var twitterlib = require('./twitterlib_new'),
     config = require('../config'),
     fs = require('fs'),
     sys = require('sys'),
