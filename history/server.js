@@ -1,4 +1,4 @@
-var twitterlib = require('./twitterlib'),
+var twitterlib = require('./twitterlib_new'),
     config = require('../config'),
     fs = require('fs'),
     sys = require('sys'),
@@ -16,7 +16,7 @@ var twitterlib = require('./twitterlib'),
 function save(tweets, options) {
   var type = options.method;
   if (tweets.length) {
-    fs.writeFileSync('./data/' + type + (++counters[type]) + '.json', 'callback(' + JSON.stringify(tweets) + ')', 'utf8');
+    fs.writeFileSync('/home/pi/twitterwall/history/data/' + type + (++counters[type]) + '.json', 'callback(' + JSON.stringify(tweets) + ')', 'utf8');
     lastId[type] = tweets[0].id;    
   }
   
