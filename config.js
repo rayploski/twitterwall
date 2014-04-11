@@ -4,6 +4,7 @@ var config = {
   baseUrl: "",
   debug: true,
   title: 'DevNation Twitter Wall',
+  filepath:  '/home/pi/twitterwall/history/data/',
 
   //list: 'DevNationConf/speakers14',
   search: 'from:@devnationconf OR #devnation OR devnation.org OR #devnation14',
