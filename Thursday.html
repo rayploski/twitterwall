@@ -10,30 +10,40 @@
 </head>
 <body class="hflex-wrapper">
 <div class="vflex-wrapper50">
-  <div id="notices">
+  <div id="schedule"> 
+    <!-- style the schedule as you please -->
+    <div id="breakfast" data-time="0845">
+      <p>Next: 8:45AM - 9:45AM </p>
+      <h3>Breakfast</h3>
+      <h2>South lower lobby</h2>
+    </div>
+
+    <div id="breakout18" data-time="0945">
+      <p>Next: 10:15AM - 11:15AM</p>
+      <h3>Session Breakouts: 18</h3>
+    </div>
+
+    <div id="breakout19" data-time="1100">
+      <p>Next: 11:00AM - 12:00PM</p>
+      <h3>Session Breakouts: 19</h3>
+      <h2>Rooms 208, 212, 220, 224 & 236</h2>    
+      </div>
+
+    <div id="lunch" data-time="1130">
+      <p>Next: 11:30AM - 2:00PM</p>
+      <h3>Lunch</h3>
+      <h2>South lower lobby</h2>
+    </div>
+
+
+  </div>
+  
+   <div id="logoplacement" ><img src="images/devnation_logo.svg" /></div>
+  
+  <div id="notices"> 
     <!-- here you create divs that are shown on a rotation, add fullscreen class, and customise the hold time with data-hold-time="3s" -->
-    <div id="notice1">
-        <img src="http://www.devnation.org/assets/images/pages/welcome/devnation_logo.png" alt="DevNation"/>
-        <h2>Many Thanks to our Sponsors:</h2>
-        <img src="https://31.media.tumblr.com/9a591926e370a091038011274503025f/tumblr_inline_n1z8nzA6XP1qkql63.gif" alt="Red Hat"/>
-        <img src="images/GoogleCloudPlatform_VerticalLockup.png" width="360" alt="Google"/>
-        <img src="images/pic-chef-logo.svg" width="360" alt="Chef">
-        <img src="images/arm-logo.jpg" width="360" alt="ARM">
-
-    </div>
-    <div id="notice2" data-hold-time="10s" onload="init_map()">
-
-        <img src="http://www.devnation.org/assets/images/pages/welcome/devnation_logo.png" alt="DevNation"/>
-        <h1>DevNation Party - Tuesday</h1>
-        <img src="images/temple_logo.jpg">
-        <p>540 HOWARD ST, SAN FRANCISCO, CA 94105 -. (415) 978-9942</p>
-        <img src="./images/DevNation_Map.jpg" alt="DevNation"/>
-
-        <!--<div id="map_canvas"></div>-->
-    </div>
-
-
-      <div id="noticeSunday" data-hold-time="10s" class="fullscreen"> </div>
+    <div id="notice1" data-hold-time="10s"><img src="images/sponsors.svg" width="100%" /></div>
+    <div id="noticeThursday" data-hold-time="10s" class="fullscreen"> </div>
   </div>
 </div>
 <div id="twitterwall">
@@ -59,8 +69,7 @@
   </script> 
 <script src="config.js"></script> 
 <script src="app/js/twitterlib.js"></script> 
-<script src="app/js/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="app/js/jquery.min.js"></script> 
 <script src="app/js/app.js"></script>
 </body>
 </html>

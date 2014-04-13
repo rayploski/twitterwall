@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DevNation Twitter Wall</title>
+<link rel="stylesheet" type="text/css" href="app/screen.css">
+
+<!-- make your customisations to the twitter wall using the custom.css -->
+<link rel="stylesheet" type="text/css" href="custom.css">
+</head>
+<body class="hflex-wrapper">
+<div class="vflex-wrapper50">
+  <div id="schedule"> 
+    <!-- style the schedule as you please -->
+    <div id="breakfast" data-time="0730">
+      <p>Next: 7:30AM - 8:30AM </p>
+      <h3>Breakfast in the Partner Pavilion</h3>
+      <h2>Halls B & C</h2>
+    </div>
+
+    <div id="summitgeneralsession" data-time="0830">
+      <p>Next: 8:30AM - 10:00AM</p>
+      <h3>Summit General Session</h3>
+      <h2>Hall A</h2>
+    </div>
+
+    <div id="breakout13" data-time="1040">
+      <p>Next: 10:40AM - 11:40AM</p>
+      <h3>Session Breakouts: 13</h3>
+      <h2>Rooms 208, 212, 220, 224 & 236</h2>   
+    </div>
+
+    <div id="lunch" data-time="1130">
+      <p>Next: 11:30AM - 2:00PM</p>
+      <h3>Lunch in the Partner Pavilion</h3>
+      <h2>Halls B & C</h2>
+    </div>
+
+   <div id="breakout14" data-time="1320">
+      <p>Next: 1:20PM - 2:20PM</p>
+      <h3>Session Breakouts: 14</h3>
+      <h2>Rooms 208, 212, 220, 224 & 236</h2>    
+    </div>
+
+   <div id="breakout15" data-time="1430">
+      <p>Next: 2:30PM - 3:30PM</p>
+      <h3>Session Breakouts: 15</h3>
+      <h2>Rooms 208, 212, 220, 224 & 236</h2>    
+    </div>
+    
+   <div id="breakout16" data-time="1540">
+      <p>Next: 3:40PM - 4:40PM</p>
+      <h3>Session Breakouts: 16</h3>
+      <h2>Rooms 208, 212, 220, 224 & 236</h2>    
+    </div>
+    
+   <div id="breakout17" data-time="1650">
+      <p>Next: 4:50PM - 5:50PM</p>
+      <h3>Session Breakouts: 17</h3>
+      <h2>Rooms 208, 212, 220, 224 & 236</h2>    
+    </div>    
+
+
+   <div id="Hacknight" data-time="1800">
+      <p>Next: 6:00PM - 11:00PM</p>
+      <h3>HackNight</h3>
+      <h2>Room 224</h2>    
+    </div>
+
+   <div id="pubcrawl" data-time="2300">
+      <p>Next: 11:00PM - 2:00AM</p>
+      <h3>Pub Crawl</h3>
+    </div>
+
+  </div>
+  
+   <div id="logoplacement" ><img src="images/devnation_logo.svg" /></div>
+  
+  <div id="notices"> 
+    <!-- here you create divs that are shown on a rotation, add fullscreen class, and customise the hold time with data-hold-time="3s" -->
+    <div id="notice1" data-hold-time="10s"><img src="images/sponsors.svg" width="100%" /></div>
+    <div id="noticeWednesday" data-hold-time="10s" class="fullscreen"> </div>
+  </div>
+</div>
+<div id="twitterwall">
+  <ul id="tweets">
+  </ul>
+</div>
+<script type="text/html" id="tweet_template">
+    <li id="<%=id%>">
+      <div class="tweet">
+        <div class="vcard">
+          <a href="http://twitter.com/<%=screen_name%>" class="url"><img style="height: 48px; width: 48px;" alt="@<%=screen_name%>" class="photo fn" height="48" src="<%=profile_image_url%>" width="48" /></a>
+        </div>
+        <div class="hentry">
+          <strong><a href="http://twitter.com/<%=screen_name%>" title="<%=name%>"><%=screen_name%></a></strong> 
+          <span class="entry-content"><%=tweet%></span>
+          <span class="meta entry-meta"><a href="http://twitter.com/<%=screen_name%>/status/<%=id%>" class="entry-date" rel="bookmark"><span class="published" title="<%=created_at%>"><%=nice_date%></span></a></span>
+        </div>
+        <% if (embeds.length) for (var i = 0; i < embeds.length; i++) { %>
+        <%=embeds[i]%>
+        <% } %>
+      </div>
+    </li>
+  </script> 
+<script src="config.js"></script> 
+<script src="app/js/twitterlib.js"></script> 
+<script src="app/js/jquery.min.js"></script> 
+<script src="app/js/app.js"></script>
+</body>
+</html>
